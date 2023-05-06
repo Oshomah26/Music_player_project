@@ -2,6 +2,7 @@ const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const replay = document.getElementById('loop');
 const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
@@ -31,9 +32,7 @@ function playSong() {
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
     audio.play();
-
 }
-
 
 
 function pauseSong() {
@@ -66,6 +65,19 @@ function nextSong(){
     playSong();
 }
 
+function replaySong(){
+     if (audio.loop) {
+        audio.loop = false;
+        document.querySelector('#loop').style.color = '#dfdbdf';
+     } else {
+        audio.loop = true;
+        document.querySelector('#loop').style.color = '#ed851d';
+
+     }
+  
+    // playSong();
+}
+
 function updateProgress(e){
     const {duration, currentTime} = e.target;
     const progressPercent = (currentTime/duration) * 100;
@@ -89,6 +101,8 @@ playBtn.addEventListener('click', () => {
         playSong();
     }
 });
+
+replay.addEventListener('click', replaySong);
 
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
