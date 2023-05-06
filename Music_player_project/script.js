@@ -8,6 +8,7 @@ const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
+const body = document.getElementById('body');
 
 
 // Song titles
@@ -111,4 +112,10 @@ audio.addEventListener('timeupdate', updateProgress);
 audio.addEventListener('ended', nextSong);
 
 progressContainer.addEventListener('click', setProgress);
+
+body.addEventListener('mousemove', changeBGcolor);
+
+function changeBGcolor(e){
+ document.body.style.backgroundColor = `rgb(${e.offsetX + 90}, ${e.offsetY + 100} , 200)`;
+}
 
