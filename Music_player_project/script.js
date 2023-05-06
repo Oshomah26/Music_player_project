@@ -71,7 +71,7 @@ function replaySong(){
         document.querySelector('#loop').style.color = '#dfdbdf';
      } else {
         audio.loop = true;
-        document.querySelector('#loop').style.color = '#ed851d';
+        document.querySelector('#loop').style.color = '#fe8daa';
 
      }
   
