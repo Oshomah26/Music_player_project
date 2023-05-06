@@ -31,7 +31,10 @@ function playSong() {
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
     audio.play();
+
 }
+
+
 
 function pauseSong() {
     musicContainer.classList.remove('play'); 
@@ -91,5 +94,7 @@ prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
 audio.addEventListener('timeupdate', updateProgress);
+audio.addEventListener('ended', nextSong);
 
 progressContainer.addEventListener('click', setProgress);
+
