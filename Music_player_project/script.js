@@ -12,7 +12,7 @@ const body = document.getElementById('body');
 
 
 // Song titles
-const songs = ['Asake', 'hey', 'summer', 'ukulele', 'Wande']
+const songs = ['Asake-2-30', 'hey', 'summer', 'ukulele', 'Wande-Kpe-Paso']
 
 // keep track of song 
 
@@ -75,8 +75,7 @@ function replaySong(){
         document.querySelector('#loop').style.color = '#fe8daa';
 
      }
-  
-    // playSong();
+
 }
 
 function updateProgress(e){
