@@ -12,7 +12,7 @@ const body = document.getElementById('body');
 
 
 // Song titles
-const songs = ['Asake-2-30', 'hey', 'summer', 'ukulele', 'Wande-Kpe-Paso']
+const songs = ['Asake-2:30', 'hey', 'summer', 'ukulele', 'Wande:Kpe-Paso']
 
 // keep track of song 
 
